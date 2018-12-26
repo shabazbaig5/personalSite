@@ -1,0 +1,26 @@
+body{
+    background-color: #424242;
+    color:white;
+}
+
+
+nav{
+    padding : 20px;
+    text-align: center;
+}
+
+nav a{
+    padding : 30px;
+    color: white;
+    text-decoration: none;
+    margin : 40px;
+    font-size: 20px
+}
+nav a:hover{
+
+    color: bisque;
+    background-color: #546E7A;
+    border-radius: 5px;
+    text-decoration: none;
+
+}

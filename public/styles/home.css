@@ -1,0 +1,93 @@
+body{
+    /* background-color: #424242; */
+    color:#E0E0E0;
+    margin : 0;
+    background-image:linear-gradient(rgba(22, 19, 19, 0.9) , rgba(1, 1, 7, 0.5)),url(/images/me.jpg);
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
+
+}
+
+
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.avatarHead img{
+   width: 500px;
+   height: 500px;
+   border-radius: 50%;
+}
+nav{
+    padding : 20px;
+    text-align: center;
+}
+
+nav a{
+    padding : 30px;
+    color: white;
+    text-decoration: none;
+    margin : 40px;
+    font-size: 20px
+}
+nav a:hover{
+
+    color: bisque;
+    background-color: #546E7A;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+
+
+
+/* upperbox style  */
+
+.upperBox{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+    
+}
+.avatarHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 10px;
+    
+}
+
+.descriptionHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 10px;
+}
+
+.content {
+    margin : 10px;
+    
+
+}
+.content h1{
+    font-size: 40px;
+}
+/* .upperBox{
+    display: grid;
+    grid-template-areas: 
+        'avatarHead simpleHead'
+        'avatarHead descriptionHead'
+}
+
+.avatarHead{
+    grid-area: avatarhead;
+}
+.simpleHead{
+    grid-area: simpleHead;
+}
+
+.descriptionHead{
+    grid-area:  descriptionHead;
+} */
