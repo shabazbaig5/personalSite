@@ -4,26 +4,48 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         link(rel="stylesheet" href="./styles/home.css")
         title Document
-    body
         include includes/navigationBar
+    body
+        
         div.wrapper.upperBox
             //- h1 Welcome to the home page
             div(class = 'avatarHead')
-                img(src="images/avatar.JPG")
+                //- img(src="images/avatar.JPG")
+                h1 M M Shahabaz Baig
 
             div(class = 'descriptionHead')
                 div.content
-                    h1 M M Shahabaz Baig
                     p This is me and here what it is
                     p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ipsam debitis error voluptatem fugiat itaque at, illo earum aliquam quo eos adipisci? Recusandae necessitatibus maxime consectetur ducimus amet fugiat tenetur.
                     | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam aperiam voluptatem adipisci et vitae, optio, ipsum inventore atque perferendis vel repellendus! Ut ad perspiciatis laborum, eum voluptatibus neque qui animi?
                     p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ipsam debitis error voluptatem fugiat itaque at, illo earum aliquam quo eos adipisci? Recusandae necessitatibus maxime consectetur ducimus amet fugiat tenetur.
                     | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam aperiam voluptatem adipisci et vitae, optio, ipsum inventore atque perferendis vel repellendus! Ut ad perspiciatis laborum, eum voluptatibus neque qui animi?
                     p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ipsam debitis error voluptatem fugiat itaque at, illo earum aliquam quo eos adipisci? Recusandae necessitatibus maxime consectetur ducimus amet fugiat tenetur.
-                    | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam aperiam voluptatem adipisci et vitae, optio, ipsum inventore atque perferendis vel repellendus! Ut ad perspiciatis laborum, eum voluptatibus neque qui animi?
+                    a(href = "#bottom") go there
 
+        div.footer.wrapper(id = "bottom")
+            div.content
+                div.left
+                    h3 Breath
+                    p I breath every day
+                div.center
+                    h3 Live
+                    p live like its my last day
+                    div.contactLinks
+                        a(href='www.linkedin.com')
+                            i(class="fab fa-linkedin-in")
+                        a(href='www.github.com')
+                            i(class="fab fa-github")
+                        a(href='www.linkedin.com')
+                            i(class="fab fa-linkedin-in")
+                div.right
+                    h3 Breath again
+                    p I breath again
+                    
+                    
 
 
     
