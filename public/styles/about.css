@@ -1,6 +1,10 @@
 body{
-    background-color: #424242;
-    color:white;
+    color:#E1F5FE;
+    margin : 0;
+    background-image:linear-gradient(rgba(22, 19, 19, 0.9) , rgba(1, 1, 7, 0.5)),url(/images/me.jpg);
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
 }
 
 

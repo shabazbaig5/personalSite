@@ -1,21 +1,15 @@
 body{
-    /* background-color: #424242; */
-    color:#E0E0E0;
+    color:#E1F5FE;
     margin : 0;
     background-image:linear-gradient(rgba(22, 19, 19, 0.9) , rgba(1, 1, 7, 0.5)),url(/images/me.jpg);
     background-size: cover;
     background-position:center;
     background-attachment: fixed;
-    /* display: grid;
-    grid-template-rows: repeat(1,1fr); */
-    
-
 }
 
 html{
     scroll-behavior: smooth;
 }
-
 
 .wrapper{
     max-width: 1000px;
@@ -28,21 +22,41 @@ html{
    border-radius: 50%;
 }
 
-nav{
-    padding : 20px;
-    text-align: center;
-    /* margin:0 auto;
-    max-width: 1000px;
-    /* position: fixed; */
-    /* justify-content: center; */
+.avatarHead h1{
+    color : #E1F5FE;
 }
 
-nav a{
+/* header and navigation bar styling */
+
+/* header{
     padding : 30px;
-    color: white;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(24, 23, 23, 0.6);
+}
+
+
+nav{
+    position: fixed;
+    left:40%
+}
+
+ */
+
+ nav a{
+    padding : 30px;
+    color: #E1F5FE;
     text-decoration: none;
-    margin : 40px;
-    font-size: 20px
+    font-size: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+nav {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    background-color: rgba(24, 23, 23, 0.6);
+
 }
 nav a:hover{
 
@@ -53,15 +67,31 @@ nav a:hover{
 
 }
 
+
+
+
 /* upperbox style  */
 
 .upperBox{
-    /* border: 1px solid black; */
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 10px;
-    height: 100vh;
+    height: 80vh;
 }
+
+.link{
+    margin-top: 80px;
+    text-align: center;
+    
+}
+
+.link a{
+    font-size: 40px;
+    text-align: center;
+    padding : 10px;
+}
+
+
 .avatarHead{
     display: flex;
     justify-content: center;
@@ -85,23 +115,6 @@ nav a:hover{
 .content h1{
     font-size: 40px;
 }
-/* .upperBox{
-    display: grid;
-    grid-template-areas: 
-        'avatarHead simpleHead'
-        'avatarHead descriptionHead'
-}
-
-.avatarHead{
-    grid-area: avatarhead;
-}
-.simpleHead{
-    grid-area: simpleHead;
-}
-
-.descriptionHead{
-    grid-area:  descriptionHead;
-} */
 
 
 /* footer styling */
@@ -115,11 +128,10 @@ nav a:hover{
 .footer .content{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 10px;
-    /* height: 100vh; */
-    
-    
+    grid-gap: 10px;   
 }
+
+
 .footer .content div{
     height: auto;
 }
@@ -137,22 +149,60 @@ nav a:hover{
     margin : 10px;
 }
 
+
 a{
     text-decoration: none;
     color : white;
     font-size: 20px;
 }
 
-
-/* .footer.content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin : 10px;
-
-}  */
-
 .contactLinks a{
+
     margin : 10px;
 
+}
+
+/* media queries */
+
+@media(max-width : 700px){
+    .upperBox{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .footer .content{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        /* grid-gap: 10px; */
+        /* height: 100vh; */
+        
+        
+    }
+
+
+    nav {
+        display: grid;
+        grid-template-rows: repeat(1,1fr);
+        justify-items: center;
+        /* grid-gap: 5px; */
+        margin : 0;
+        padding : 0;
+        background-color: rgba(24, 23, 23, 0.6);
+    
+    }
+    
+    body{
+        /* background-color: #424242; */
+        color:#E0E0E0;
+        margin : 0;
+        background-image:linear-gradient(rgba(22, 19, 19, 0.9) , rgba(1, 1, 7, 0.5)),url(/images/me.jpg);
+         
+        background-position:inherit;
+        background-attachment: fixed;
+        background-size: cover;
+        /* display: grid;
+        grid-template-rows: repeat(1,1fr); */
+        
+    
+    }
 }
