@@ -1,5 +1,6 @@
 const express = require('express');
 const aboutRouer = require('./routers/about');
+const contactRouter = require('./routers/contact');
 const app  = express();
 
 
@@ -11,7 +12,7 @@ app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
 
 app.use('/about',aboutRouer());
-
+app.use('/contact',contactRouter());
 app.get('/', (req,res) => {
 
     res.render('home');
