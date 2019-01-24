@@ -9,6 +9,7 @@ body{
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
+    
 }
 html{
     scroll-behavior: smooth;
@@ -94,7 +95,9 @@ nav a:hover{
     
 
 }
-
+.upperbox .content p{
+    line-height: 1.6;
+}
 .description{
     display: flex;
     justify-content: center;
@@ -176,12 +179,43 @@ nav a:hover{
 
 /* containerBtm styling */
 .containerBtm{
-    background-color: white;
-    color:black;
+    background-color: rgba(26, 26, 27, 0.5);;
+    color:white;
     height:100vh;
+    display: flex;
+    flex-flow: column;
+    
+    justify-content: center;
+    text-align: center;
+    /* margin-top:30px; */
+}
+.btmTitle{
+    text-align: center;
 }
 
 .btmBox{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 3fr 3fr;
+    margin-top:30px;
+    grid-gap: 10px;
+    grid-column-gap: 10vh;
+    grid-row-gap: 3vh;
+    
 }
+
+.btmBox div{
+    height: auto;
+    /* border: 1px solid black; */
+    /* width: auto; */
+    text-align: justify;
+    /* padding : 5px; */
+    line-height: 1.6;
+}
+
+img{
+    width: 40vh;
+    height: 23vh;
+    border-radius: 3% 3% 3% 3%;
+
+}
+
