@@ -28,6 +28,7 @@ module.exports = () => {
                         // console.log(eachhobby.hobby);
                     });
                     // console.log(rows);
+                    // connect.end();
                     resolve(hobbies);
                 }
             });
@@ -39,6 +40,7 @@ module.exports = () => {
             res.render('about',{
                 hobbies : result
             });
+            // connect.end();
         }).catch((err) => {
             console.error(err);
         });

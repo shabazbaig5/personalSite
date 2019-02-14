@@ -18,8 +18,31 @@ h1{
     height:80vh;
     align-items: center;
     align-content: center;
-    justify-content: center
+    justify-content: center;
 }
 .wrapJumbo{
     width: 400px;
+}
+
+
+.dispHob{
+    margin:50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height:auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    /* justify-content: center; */
+    
+    grid-gap: 10px;
+}
+
+
+.dispHob p{
+    height: 10vh;
+}
+
+.btnDiv{
+    text-align: center;
 }

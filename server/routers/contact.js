@@ -6,13 +6,13 @@ const nodeMailer = require('nodemailer');
 
 // var hobbies;
 
-// const connect = mysql.createConnection({
-//     host : '127.0.0.1',
-//     port: 3306,
-//     user:'root',
-//     password:'ethanHunt@123',
-//     database:'usersdata'
-// });
+const connect = mysql.createConnection({
+    host : '127.0.0.1',
+    port: 3306,
+    user:'root',
+    password:'ethanHunt@123',
+    database:'usersdata'
+});
 
 router.use(bodyParser.urlencoded({extended:false}));
 
@@ -20,8 +20,45 @@ router.use(bodyParser.urlencoded({extended:false}));
 module.exports = () => {
 
     router.get('/', (req,res) => {
-        
+
+
         res.render('contact');
+
+        // await getRows();
+        // connect.end();
+        // console.log(`after printing the rows this statement will be printed`);
+    });
+
+
+
+    router.get('/hobbies',(req,res) => {
+
+        getRows = () => {
+            return new Promise((resolve,reject) => {
+                connect.query('SELECT * FROM hobbies', (err,rows,columns) => {
+                    if(err){
+                        console.error(err);
+                    }
+                    else{
+                        console.log(rows);
+                        resolve(rows);
+                        // connect.end()
+                        
+                    }
+                });
+            });
+
+        }
+
+        renderPage = async() => {
+
+            let hobbies = await getRows();
+            console.log("now it will print after the rows are printed");
+            res.send(hobbies);
+            // connect.end();
+        
+        }
+        renderPage();
     });
 
     router.post('/', (req,res) => {
@@ -58,6 +95,7 @@ module.exports = () => {
             console.log(result.messageId);
             console.log(result.envelope.to);
             res.send('Ethan Hunt will get in touch with you');
+
         }).catch((err) =>{
             console.error(err);
         });
@@ -65,9 +103,10 @@ module.exports = () => {
         // let info = transporter.sendMail(mailOptions);
          
 
-
     });
 
-
+    
+    
     return router;
+
 }
